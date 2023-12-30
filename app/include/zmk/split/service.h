@@ -39,6 +39,11 @@ struct zmk_split_input_event_payload {
     uint8_t sync;
 } __packed;
 
+struct zmk_split_run_behavior_payload_wrapper {
+    uint8_t source;
+    struct zmk_split_run_behavior_payload payload;
+};
+
 int zmk_split_position_pressed(uint8_t position);
 int zmk_split_position_released(uint8_t position);
 int zmk_split_sensor_triggered(uint8_t sensor_index,
