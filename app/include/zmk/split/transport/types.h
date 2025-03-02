@@ -29,8 +29,6 @@ struct zmk_split_transport_peripheral_event {
         struct {
             struct zmk_sensor_channel_data channel_data;
 
-            int64_t timestamp;
-
             uint8_t sensor_index;
         } sensor_event;
 

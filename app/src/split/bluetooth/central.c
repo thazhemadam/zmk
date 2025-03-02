@@ -283,7 +283,6 @@ static uint8_t split_central_sensor_notify_func(struct bt_conn *conn,
                   .data = {.sensor_event = {
                                .channel_data = sensor_event.channel_data[0],
                                .sensor_index = sensor_event.sensor_index,
-                               .timestamp = k_uptime_get(),
                            }}}};
 
     k_msgq_put(&peripheral_event_msgq, &event_wrapper, K_NO_WAIT);

@@ -102,7 +102,6 @@ int split_peripheral_listener(const zmk_event_t *eh) {
             .type = ZMK_SPLIT_TRANSPORT_PERIPHERAL_EVENT_TYPE_SENSOR_EVENT,
             .data = {.sensor_event = {
                          .channel_data = sensor_ev->channel_data[0],
-                         .timestamp = sensor_ev->timestamp,
                          .sensor_index = sensor_ev->sensor_index,
                      }}};
 

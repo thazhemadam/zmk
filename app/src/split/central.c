@@ -67,7 +67,7 @@ int zmk_split_transport_central_peripheral_event_handler(
     case ZMK_SPLIT_TRANSPORT_PERIPHERAL_EVENT_TYPE_SENSOR_EVENT: {
         struct zmk_sensor_event sensor_ev = {.sensor_index = ev.data.sensor_event.sensor_index,
                                              .channel_data_size = 1,
-                                             .timestamp = ev.data.sensor_event.timestamp};
+                                             .timestamp = k_uptime_get()};
 
         sensor_ev.channel_data[0] = ev.data.sensor_event.channel_data;
 
