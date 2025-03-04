@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 description: |
-  Complete specification of wired split connetion
+  Complete specification of wired split connection
 
 compatible: "zmk,wired-split"
 
