@@ -193,16 +193,13 @@ static void async_uart_cb(const struct device *dev, struct uart_event *ev, void 
             break;
         }
 
-        LOG_DBG("RX %d and now buffer is %d", received, ring_buf_size_get(state->rx_buf));
+        // LOG_DBG("RX %d and now buffer is %d", received, ring_buf_size_get(state->rx_buf));
         if (state->process_tx_callback) {
             state->process_tx_callback();
         } else if (state->process_tx_work) {
             k_work_submit(state->process_tx_work);
         }
 
-        // if (ring_buf_size_get(state->rx_buf) >= state->rx_size_process_trigger) {
-        //     LOG_DBG("RX %d and now buffer is %d", received, ring_buf_size_get(state->rx_buf));
-        // }
         break;
     }
     case UART_RX_BUF_RELEASED:

@@ -89,7 +89,7 @@ static struct zmk_split_wired_async_state async_state = {
 #if HAS_DIR_GPIO
     .dir_gpio = &dir_gpio,
 #endif
-    ;
+};
 
 #endif
 
