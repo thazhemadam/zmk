@@ -9,7 +9,7 @@ manifest:
   projects:
     - name: zephyr
       remote: taz
-      revision: v3.5.0+zmk-fixes+pio-led+3.5-stm32-bootloader-support 
+      revision: v3.5.0+zmk-fixes+pio-led+3.5-stm32-bootloader-support+zephyr-91353
       clone-depth: 1
       import:
         name-blocklist:
